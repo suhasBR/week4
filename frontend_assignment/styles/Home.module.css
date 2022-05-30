@@ -55,3 +55,9 @@
     line-height: 1.5;
     font-size: 1.5rem;
 }
+
+.scroller{
+    margin-top: 7rem;
+    font-size: 32px;
+    cursor: pointer;
+}

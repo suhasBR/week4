@@ -14,6 +14,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const contractOwner = contract.connect(provider.getSigner())
 
+
+    contractOwner.on('NewGreeting',(greeting:any) => {
+        console.log(greeting);
+    })
+
+    
+
     try {
         await contractOwner.greet(utils.formatBytes32String(greeting), nullifierHash, solidityProof)
 
